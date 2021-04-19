@@ -1,0 +1,828 @@
+/* ========================================== */
+@charset "UTF-8";
+
+/* ========================================== */
+/* base */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-size: 14px;
+  font-family: "sans-serif";
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* ========================================== */
+/* global */
+.container {
+  width: 94%;
+  margin: auto;
+}
+
+.button {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pc-none {
+  display: none;
+}
+
+.section {
+  padding: 60px 0 70px;
+}
+
+.title-box {
+  text-align: center;
+}
+
+.title {
+  font-size: 37px;
+  line-height: 1.63;
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.contents-wrap {
+  margin-top: 40px;
+}
+
+.boxes {
+  display: flex;
+}
+
+.box {
+  width: 310px;
+}
+
+/* ========================================== */
+/* ヘッダー */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+header .container {
+  max-width: 980px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 100px;
+  height: 20px;
+}
+
+header .list {
+  display: flex;
+  align-items: center;
+}
+
+header .item + .item {
+  margin-left: 20px;
+}
+
+header .button {
+  width: 132px;
+  height: 30px;
+  font-weight: bold;
+  background-color: #ffa800;
+  border-radius: 9999px;
+}
+
+header .drawer {
+  display: none;
+}
+
+header .toggle {
+  width: 24px;
+  height: 4px;
+  background: #333;
+  border-radius: 9999px;
+  display: block;
+}
+
+header .toggle + .toggle {
+  margin: 4px auto 0;
+}
+
+/* ========================================== */
+/* First View */
+.first-view {
+  background-image: url(../img/first-view.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0 120px;
+  color: #fff;
+}
+
+.first-view .container {
+  max-width: 662px;
+}
+
+.first-view .text{
+  line-height: 1.8;
+  margin: 39px auto 0;
+  text-align: center;
+}
+
+.first-view .list {
+  line-height: 1.8;
+  list-style-type: disc;
+  list-style-position: inside;
+  border-top: 1px solid #fff;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.first-view .button-wrap {
+  margin-top: 40px;
+}
+
+.first-view .button {
+  max-width: 252px;
+  height: 35px;
+  margin: 0 auto;
+  font-weight: bold;
+  background-color: #ffa800;
+  border-radius: 9999px;
+}
+
+/* ========================================== */
+/* PIX TECHの特徴 */
+.section1 {
+  background-color: #f2faff;
+}
+
+.section1 .container {
+  max-width: 980px;
+}
+
+/* .section1 .boxes {
+  display: flex;
+} */
+
+/* .section1 .box {
+  width: 310px;
+} */
+
+.section1 .box .img {
+  width: 198px;
+  margin: auto;
+}
+
+.section1 .box .concept {
+  margin-top: 20px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.section1 .text {
+  margin: 32px auto 0;
+  line-height: 1.8;
+}
+
+/* ========================================== */
+/* PIXTECHの思い */
+.section2 {
+  background-image: url(../img/section2-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.section2 .container {
+  max-width: 600px;
+}
+
+.section2 .text-box {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.section2 .text-box .text {
+  line-height: 1.8;
+}
+
+/* ========================================== */
+/* カリキュラム */
+.section3 {
+  background-color: #fff;
+}
+
+.section3 .container {
+  max-width: 980px;
+}
+
+.section3 .box-title {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+}
+
+.section3 .box-title:before,
+.section3 .box-title:after {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  background-color: #eee;
+}
+
+.section3 .box-title:before {
+  margin-right: 10px;
+}
+
+.section3 .box-title:after {
+  margin-left: 10px;
+}
+
+.section3 .boxes {
+  margin-top: 40px;
+}
+
+.section3 .box .img {
+  margin: auto
+}
+
+.section3 .box .text {
+  margin: 20px auto 0;
+  font-size: 23px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.section3 .boxes + .box-title {
+  margin-top: 100px;
+}
+
+.section3 .lang-img {
+  width: 142px;
+  margin: auto;
+}
+
+.section3 .lang-text {
+  margin: 21px auto 0;
+  border-top: solid 1px #eee;
+  padding-top: 10px;
+  line-height: 1.5;
+}
+
+/* ========================================== */
+/* コース紹介 */
+.section4 {
+  background-image: url(../img/section4-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: #d8d8d8;
+}
+
+.section4 .container {
+  max-width: 980px;
+}
+
+.section4 .course-box {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 20px;
+  background-color: #fff;
+}
+
+.section4 .paid-box, .free-box {
+  height: 255px;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.section4 .paid-box {
+  background-image: url(../img/section4-1.png);
+}
+
+.section4 .course {
+  height: 34px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #ffa800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section4 .paid-box .course {
+  width: 226px;
+}
+
+.section4 .paid {
+  margin-top: 15px;
+}
+
+.section4 .paid,.free .item {
+  color: #fff;
+}
+
+.section4 .course-box .item-org {
+  color: #ffa800;
+  font-size: 24px;
+  line-height: 1.38;
+}
+
+.section4 .course-box .text-box {
+  max-width: 449px;
+  width: 94%;
+  margin: 21px auto 0;
+}
+
+.section4 .course-box .text {
+  line-height: 1.8;
+}
+
+.section4 .terms {
+  font-weight: bold;
+  border-top: 1px solid #eee;
+  margin: 20px auto 0;
+  padding-top: 10px;
+}
+
+.section4 .list {
+  line-height: 1.8;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin: 19px auto 0;
+}
+
+.section4 .free-box {
+  background-image: url(../img/section4-2.png);
+}
+
+.section4 .free-box .course {
+  width: 178px;
+}
+
+.section4 .free {
+  margin-top: 10px;
+}
+
+/* ========================================== */
+.section5 {
+  background-color: #fff;
+}
+
+.section5 .container {
+  max-width: 980px;
+}
+
+.section5 .boxes {
+  align-items: center;
+}
+
+.section5 .teacher,.teacher-name {
+  display: flex;
+  align-items: center;
+}
+
+.section5 .teacher {
+  height: 25px;
+}
+
+.section5 .teacher-bold {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.section5 .teacher-name .name-kana {
+  margin-left: 21px;
+}
+
+.section5 .teacher-text {
+  max-width: 696px;
+  line-height: 1.79;
+  margin-top: 11px;
+  border-top: solid 1px #eee;
+  padding-top: 10px;
+}
+
+.section5 .teacher-img {
+  max-width: 252px;
+  margin-left: 34px;
+}
+
+/* ========================================== */
+.section6 {
+  background-color: #eee;
+}
+
+.section6 .container {
+  max-width: 980px;
+}
+
+.section6 .question-box {
+  background-color: #fff;
+  padding: 20px 20px 66px;
+  margin: 0 auto;
+}
+
+.section6 .QA {
+  max-width: 940px;
+}
+
+.section6 .QA + .QA {
+  margin-top: 86px;
+}
+
+.section6 .question {
+  font-weight: bold;
+}
+
+.section6 .question .text {
+  color: #3333cc;
+}
+
+.section6 .answer {
+  border-top: solid 1px #eee;
+  padding-top: 10px;
+  margin-top: 10px;
+  line-height: 1.28;
+}
+
+.section6 .answer .text {
+  color: #cc3333;
+  font-weight: bold;
+}
+
+/* ========================================== */
+.section7 {
+  background-color: #fff;
+}
+
+.section7 .container {
+  max-width: 600px;
+}
+
+.section7 .form-box {
+  margin: 0 auto;
+}
+
+/* .section7 .form {
+  height: 56px;
+  margin-left: 15px;
+}
+
+.section7 .form + .form {
+  border-top: solid 1px #eee;
+} */
+
+/* .section7 .inputs {
+  width: 433px;
+  margin-left: 13px;
+} */
+
+/* .section7 .need {
+  color: #fff;
+  background-color: #ffe5b3;
+  padding: 3px;
+  margin-left: 10px;
+  width: 34px;
+  height: 20px;
+  border-radius: 5px;
+} */
+
+.section7 .form-check {
+  border-top: solid 1px #eee;
+  padding-top: 20px;
+}
+
+.section7 .inquiry {
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+.section7 .button-wrap {
+  margin-top: 20px;
+}
+
+.section7 .button-wrap  + .button-wrap {
+  margin-top: 10px;
+}
+
+.section7 .button {
+  max-width: 371px;
+  height: 54px;
+  margin: 0 auto;
+  background-color: #ccc;
+  border-radius: 9999px;
+}
+
+.section7 .button-line {
+  max-width: 371px;
+  height: 54px;
+  margin: 0 auto;
+  padding: 14px 53px 14px 54px;
+  color: #fff;
+  background-color: #2cbf13;
+  border-radius: 9999px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section7 .line-left {
+  font-size: 26px;
+}
+
+.section7 .line-right {
+  font-size: 14px;
+}
+
+
+/* ========================================== */
+.section8 {
+  background-image: url(../img/section8-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 60px;
+  color: #fff;
+}
+
+.section8 .about {
+  margin: auto;
+  text-align: center;
+}
+
+.section8 .company {
+  font-size: 23px;
+}
+
+.section8 .address {
+  margin-top: 20px;
+}
+
+.section8 .address .item + .item {
+  margin-top: 7px;
+}
+
+.section8 .scroll {
+  margin: 20px 10px 0 0;
+}
+
+.section8 .scroll .button {
+  width: 105px;
+  height: 39px;
+  margin: 0 0 0 auto;
+  background-color: #ffa800;
+}
+
+.section8 .scroll .page-top {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.section8 .scroll .fa-arrow-up {
+  margin-left: 5px;
+}
+
+.section8 .footer-box {
+  width:100%;
+  background-color: #333;
+}
+
+.section8 .footer-box .bar {
+  max-width: 980px;
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* ========================================== */
+/* レスポンシブ */
+@media screen and (max-width: 1024px) {
+  header .nav {
+    display: none;
+  }
+
+  header .drawer {
+    display: block;
+  }
+
+  .section4 .course-box .text {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .section4 .course-box .text {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .first-view .list {
+    margin: 20px auto 0;
+    padding-top: 20px;
+  }
+
+  .pc-none {
+    display: block;
+  }
+
+  .boxes {
+    flex-direction: column;
+  }
+
+  .box {
+    margin: auto;
+  }
+
+  .box + .box {
+    margin-top: 40px;
+  }
+
+  .section2 .sp-none {
+    display: none;
+  }
+
+  .section3 .subtitle {
+    text-align: center;
+  }
+
+  .section3 .img {
+    width: 80%;
+  }
+
+  .section4 .contents-wrap {
+    margin-top: 20px;
+  }
+
+  .section4 .course-box + .course-box {
+    margin: 40px auto 0;
+  }
+
+  .section4 .course-box .text {
+    height: 150px;
+  }
+
+  .section5 .teacher-img {
+    display: none;
+  }
+
+  .section7 .form-box .form {
+    display: block;
+  }
+
+  .section8 .scroll {
+    display: none;
+  }
+
+  .section8 .footer-box {
+    margin-top: 84px;
+    padding: 20px 0 ;
+  }
+
+  .section8 .footer-box .bar {
+    display: block;
+    text-align: center;
+  }
+
+  .section8 .footer-box .text + .text,.copyright {
+    margin: 20px auto 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .first-view .list {
+    margin: 40px auto 0;
+    padding-top: 40px;
+  }
+
+  .box + .box {
+    margin-left: 25px;
+  }
+
+  .section4 .course-box + .course-box {
+    margin-left: 20px;
+  }
+
+  .section5 .teacher-img {
+    max-width: 250px;
+    margin-left: 34px;
+  }
+
+  .section7 .form-box .form {
+    display: flex;
+    align-items: center;
+  }
+
+  .section8 .footer-box {
+    height: 25px;
+    margin-top: 25px;
+    padding: 6px 0 5px;
+  }
+
+  .section8 .footer-box .text {
+    text-align: left;
+  }
+
+  .section8 .footer-box .text + .text {
+    margin-left: 20px;
+  }
+
+  .section8 .copyright {
+    margin: 0 0 0 auto;
+    text-align: right;
+  }
+}
+
+
+
+.form {
+  display: grid;
+  grid-template-rows: 56px;
+  grid-template-columns: 1fr 433px;
+}
+
+.section7 .need {
+  color: #fff;
+  background-color: #ffe5b3;
+  padding: 3px;
+  margin-left: 10px;
+  width: 34px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+/* dl {
+  display: flex;
+  line-height: 4;
+}
+
+dt {
+  display: flex;
+  align-items: center;
+} */
+
+/* dd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 433px;
+} */
+
+.select {
+  position: relative;
+}
+select {
+  height: 37px;
+}
+/* セレクトボックスの矢印デザイン変更 */
+.select::before {
+  border-bottom: 4.5px solid #333;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  content: "";
+  position: absolute;
+  right: 38px;
+  top: 20px;
+  width: 0;
+}
+.select::after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4.5px solid #333;
+  content: "";
+  position: absolute;
+  right: 38px;
+  top: 30px;
+  width: 0;
+}
