@@ -490,25 +490,22 @@ header .toggle + .toggle {
   max-width: 600px;
 }
 
-.section7 .form-box {
-  margin: 0 auto;
+.dl {
+  display: flex;
+  padding-left: 15px;
 }
 
-/* .section7 .form {
-  height: 56px;
-  margin-left: 15px;
-}
-
-.section7 .form + .form {
+.dl:not(:first-child) {
+  margin-top: 17px;
+  padding-top: 17px;
   border-top: solid 1px #eee;
-} */
+}
 
-/* .section7 .inputs {
-  width: 433px;
-  margin-left: 13px;
-} */
+.dt,.dd {
+  line-height: 1.6;
+}
 
-/* .section7 .need {
+.section7 .need {
   color: #fff;
   background-color: #ffe5b3;
   padding: 3px;
@@ -516,10 +513,48 @@ header .toggle + .toggle {
   width: 34px;
   height: 20px;
   border-radius: 5px;
-} */
+}
+
+.inputs {
+  color: #5a5a5a;
+}
+
+.select {
+  position: relative;
+  border-top: solid 1px #eee;
+  margin-top: 18px;
+  padding-top: 18px;
+}
+
+select {
+  height: 14px;
+  color: #5a5a5a;
+}
+
+.select::before {
+  border-bottom: 5px solid #333;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 20px;
+  width: 0;
+}
+.select::after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #333;
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 20px;
+  width: 0;
+}
 
 .section7 .form-check {
   border-top: solid 1px #eee;
+  margin-top: 18px;
   padding-top: 20px;
 }
 
@@ -594,13 +629,13 @@ header .toggle + .toggle {
 }
 
 .section8 .scroll {
-  margin: 20px 10px 0 0;
+  margin-top: 20px;
 }
 
 .section8 .scroll .button {
   width: 105px;
   height: 39px;
-  margin: 0 0 0 auto;
+  margin: 0 10px 0 auto;
   background-color: #ffa800;
 }
 
@@ -697,8 +732,12 @@ header .toggle + .toggle {
     display: none;
   }
 
-  .section7 .form-box .form {
+  .dl {
     display: block;
+  }
+
+  .dt,.dd {
+    width: 100%;
   }
 
   .section8 .scroll {
@@ -739,9 +778,13 @@ header .toggle + .toggle {
     margin-left: 34px;
   }
 
-  .section7 .form-box .form {
-    display: flex;
-    align-items: center;
+  .dt {
+    width: 25%;
+  }
+  
+  .dd {
+    width: 75%;
+    padding-left: 13px;
   }
 
   .section8 .footer-box {
@@ -762,67 +805,4 @@ header .toggle + .toggle {
     margin: 0 0 0 auto;
     text-align: right;
   }
-}
-
-
-
-.form {
-  display: grid;
-  grid-template-rows: 56px;
-  grid-template-columns: 1fr 433px;
-}
-
-.section7 .need {
-  color: #fff;
-  background-color: #ffe5b3;
-  padding: 3px;
-  margin-left: 10px;
-  width: 34px;
-  height: 20px;
-  border-radius: 5px;
-}
-
-/* dl {
-  display: flex;
-  line-height: 4;
-}
-
-dt {
-  display: flex;
-  align-items: center;
-} */
-
-/* dd {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 433px;
-} */
-
-.select {
-  position: relative;
-}
-select {
-  height: 37px;
-}
-/* セレクトボックスの矢印デザイン変更 */
-.select::before {
-  border-bottom: 4.5px solid #333;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  content: "";
-  position: absolute;
-  right: 38px;
-  top: 20px;
-  width: 0;
-}
-.select::after {
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 4.5px solid #333;
-  content: "";
-  position: absolute;
-  right: 38px;
-  top: 30px;
-  width: 0;
 }
