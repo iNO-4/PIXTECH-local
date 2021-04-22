@@ -79,7 +79,7 @@ ul {
 }
 
 .box {
-  width: 310px;
+  max-width: 310px;
 }
 
 /* ========================================== */
@@ -180,7 +180,6 @@ header .toggle + .toggle {
 }
 
 /* ========================================== */
-/* PIX TECHの特徴 */
 .section1 {
   background-color: #f2faff;
 }
@@ -189,15 +188,7 @@ header .toggle + .toggle {
   max-width: 980px;
 }
 
-/* .section1 .boxes {
-  display: flex;
-} */
-
-/* .section1 .box {
-  width: 310px;
-} */
-
-.section1 .box .img {
+.section1 .box .image {
   width: 198px;
   margin: auto;
 }
@@ -725,7 +716,7 @@ select {
   }
 
   .section4 .course-box .text {
-    height: 150px;
+    height: auto;
   }
 
   .section5 .teacher-img {
