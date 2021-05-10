@@ -17,10 +17,11 @@ body {
   color: #333;
   font-size: 14px;
   font-family: "sans-serif";
+  line-height: 1.8;
 }
 
 img {
-  width: 100%;
+  max-width: 100%; /* 画像サイズより親が超えたときの問題 */
   height: auto;
   vertical-align: bottom;
 }
@@ -67,7 +68,6 @@ ul {
 
 .subtitle {
   font-size: 14px;
-  line-height: 1.8;
 }
 
 .contents-wrap {
@@ -79,7 +79,8 @@ ul {
 }
 
 .box {
-  max-width: 310px;
+  width: 310px;
+  max-width: 100%;
 }
 
 /* ========================================== */
@@ -101,6 +102,7 @@ header .container {
 header .logo {
   width: 100px;
   height: 20px;
+  line-height: 1;
 }
 
 header .list {
@@ -151,13 +153,11 @@ header .toggle + .toggle {
 }
 
 .first-view .text{
-  line-height: 1.8;
   margin: 39px auto 0;
   text-align: center;
 }
 
 .first-view .list {
-  line-height: 1.8;
   list-style-type: disc;
   list-style-position: inside;
   border-top: 1px solid #fff;
@@ -201,7 +201,6 @@ header .toggle + .toggle {
 
 .section1 .text {
   margin: 32px auto 0;
-  line-height: 1.8;
 }
 
 /* ========================================== */
@@ -217,15 +216,6 @@ header .toggle + .toggle {
   max-width: 600px;
 }
 
-.section2 .text-box {
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.section2 .text-box .text {
-  line-height: 1.8;
-}
-
 /* ========================================== */
 /* カリキュラム */
 .section3 {
@@ -239,7 +229,13 @@ header .toggle + .toggle {
 .section3 .box-title {
   display: flex;
   align-items: center;
+  text-align: center;
   font-size: 28px;
+  line-height: 1;
+}
+
+.section3 .box-title .center {
+  width: 272px;
 }
 
 .section3 .box-title:before,
@@ -250,19 +246,11 @@ header .toggle + .toggle {
   background-color: #eee;
 }
 
-.section3 .box-title:before {
-  margin-right: 10px;
-}
-
-.section3 .box-title:after {
-  margin-left: 10px;
-}
-
 .section3 .boxes {
   margin-top: 40px;
 }
 
-.section3 .box .img {
+.section3 .box .image {
   margin: auto
 }
 
@@ -277,12 +265,12 @@ header .toggle + .toggle {
   margin-top: 100px;
 }
 
-.section3 .lang-img {
+.section3 .language-image {
   width: 142px;
   margin: auto;
 }
 
-.section3 .lang-text {
+.section3 .language-text {
   margin: 21px auto 0;
   border-top: solid 1px #eee;
   padding-top: 10px;
@@ -337,16 +325,20 @@ header .toggle + .toggle {
 
 .section4 .paid {
   margin-top: 15px;
+  line-height: 0.7;
+}
+
+.section4 .paid .item {
+  line-height: 1.14;
 }
 
 .section4 .paid,.free .item {
   color: #fff;
 }
 
-.section4 .course-box .item-org {
+.section4 .course-box .item-large {
   color: #ffa800;
   font-size: 24px;
-  line-height: 1.38;
 }
 
 .section4 .course-box .text-box {
@@ -355,22 +347,19 @@ header .toggle + .toggle {
   margin: 21px auto 0;
 }
 
-.section4 .course-box .text {
-  line-height: 1.8;
-}
-
 .section4 .terms {
   font-weight: bold;
   border-top: 1px solid #eee;
   margin: 20px auto 0;
   padding-top: 10px;
+  line-height: 1;
 }
 
 .section4 .list {
-  line-height: 1.8;
   list-style-type: disc;
-  list-style-position: inside;
+  list-style-position: outside;
   margin: 19px auto 0;
+  padding-left: 1em;
 }
 
 .section4 .free-box {
@@ -383,6 +372,7 @@ header .toggle + .toggle {
 
 .section4 .free {
   margin-top: 10px;
+  line-height: 1.08;
 }
 
 /* ========================================== */
@@ -398,13 +388,14 @@ header .toggle + .toggle {
   align-items: center;
 }
 
-.section5 .teacher,.teacher-name {
-  display: flex;
-  align-items: center;
-}
-
 .section5 .teacher {
   height: 25px;
+}
+
+.section5 .teacher-name {
+  display: flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .section5 .teacher-bold {
@@ -424,7 +415,7 @@ header .toggle + .toggle {
   padding-top: 10px;
 }
 
-.section5 .teacher-img {
+.section5 .teacher-image {
   max-width: 252px;
   margin-left: 34px;
 }
@@ -452,22 +443,23 @@ header .toggle + .toggle {
   margin-top: 86px;
 }
 
-.section6 .question {
+.section6 .QA .question {
   font-weight: bold;
+  line-height: 1;
 }
 
-.section6 .question .text {
+.section6 .QA .question .text {
   color: #3333cc;
 }
 
-.section6 .answer {
+.section6 .QA .answer {
   border-top: solid 1px #eee;
   padding-top: 10px;
   margin-top: 10px;
   line-height: 1.28;
 }
 
-.section6 .answer .text {
+.section6 .QA .answer .text {
   color: #cc3333;
   font-weight: bold;
 }
@@ -481,22 +473,21 @@ header .toggle + .toggle {
   max-width: 600px;
 }
 
-.dl {
-  display: flex;
+.section7 .form-box .dl {
   padding-left: 15px;
 }
 
-.dl:not(:first-child) {
+.section7 .form-box .dl:not(:first-child) {
   margin-top: 17px;
   padding-top: 17px;
   border-top: solid 1px #eee;
 }
 
-.dt,.dd {
+.section7 .form-box .dt,.dd {
   line-height: 1.6;
 }
 
-.section7 .need {
+.section7 .form-box .need {
   color: #fff;
   background-color: #ffe5b3;
   padding: 3px;
@@ -506,23 +497,23 @@ header .toggle + .toggle {
   border-radius: 5px;
 }
 
-.inputs {
+.section7 .form-box .inputs {
   color: #5a5a5a;
 }
 
-.select {
+.section7 .form-box .select-box {
   position: relative;
   border-top: solid 1px #eee;
   margin-top: 18px;
   padding-top: 18px;
 }
 
-select {
+.section7 .form-box .select {
   height: 14px;
   color: #5a5a5a;
 }
 
-.select::before {
+.section7 .form-box .select-box::before {
   border-bottom: 5px solid #333;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
@@ -532,7 +523,8 @@ select {
   left: 20px;
   width: 0;
 }
-.select::after {
+
+.section7 .form-box .select-box::after {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 5px solid #333;
@@ -543,26 +535,32 @@ select {
   width: 0;
 }
 
-.section7 .form-check {
+.section7 .form-box .check-wrap {
   border-top: solid 1px #eee;
   margin-top: 18px;
   padding-top: 20px;
+  line-height: 1;
 }
 
-.section7 .inquiry {
+.section7 .check-wrap #check {
+  vertical-align: text-top;
+}
+
+.section7 .form-box .inquiry {
   margin: 50px auto 0;
   text-align: center;
+  line-height: 1;
 }
 
-.section7 .button-wrap {
+.section7 .form-box .button-wrap {
   margin-top: 20px;
 }
 
-.section7 .button-wrap  + .button-wrap {
+.section7 .form-box .inquiry + .button-wrap {
   margin-top: 10px;
 }
 
-.section7 .button {
+.section7 .form-box .button {
   max-width: 371px;
   height: 54px;
   margin: 0 auto;
@@ -570,7 +568,7 @@ select {
   border-radius: 9999px;
 }
 
-.section7 .button-line {
+.section7 .form-box .button-line {
   max-width: 371px;
   height: 54px;
   margin: 0 auto;
@@ -584,11 +582,11 @@ select {
   justify-content: space-between;
 }
 
-.section7 .line-left {
+.section7 .form-box .line-left {
   font-size: 26px;
 }
 
-.section7 .line-right {
+.section7 .form-box .line-right {
   font-size: 14px;
 }
 
@@ -605,6 +603,10 @@ select {
 .section8 .about {
   margin: auto;
   text-align: center;
+}
+
+.section8 .contents-wrap {
+  line-height: 1;
 }
 
 .section8 .company {
@@ -640,7 +642,6 @@ select {
 }
 
 .section8 .footer-box {
-  width:100%;
   background-color: #333;
 }
 
@@ -649,6 +650,7 @@ select {
   width: 94%;
   margin: 0 auto;
   display: flex;
+  line-height: 1;
 }
 
 /* ========================================== */
@@ -695,15 +697,7 @@ select {
     margin-top: 40px;
   }
 
-  .section2 .sp-none {
-    display: none;
-  }
-
-  .section3 .subtitle {
-    text-align: center;
-  }
-
-  .section3 .img {
+  .section3 .image {
     width: 80%;
   }
 
@@ -719,16 +713,18 @@ select {
     height: auto;
   }
 
-  .section5 .teacher-img {
+  .section5 .teacher-image {
     display: none;
   }
 
-  .dl {
+  .section7 .form-box .dl {
     display: block;
   }
 
-  .dt,.dd {
-    width: 100%;
+  .section7 .form-box .check-wrap {
+    line-height: 1.8;
+    display: flex;
+    justify-content: center;
   }
 
   .section8 .scroll {
@@ -764,16 +760,20 @@ select {
     margin-left: 20px;
   }
 
-  .section5 .teacher-img {
+  .section5 .teacher-image {
     max-width: 250px;
     margin-left: 34px;
   }
 
-  .dt {
+  .section7 .form-box .dl {
+    display: flex;
+  }
+
+  .section7 .form-box .dt {
     width: 25%;
   }
   
-  .dd {
+  .section7 .form-box .dd {
     width: 75%;
     padding-left: 13px;
   }
@@ -784,16 +784,11 @@ select {
     padding: 6px 0 5px;
   }
 
-  .section8 .footer-box .text {
-    text-align: left;
-  }
-
   .section8 .footer-box .text + .text {
     margin-left: 20px;
   }
 
   .section8 .copyright {
     margin: 0 0 0 auto;
-    text-align: right;
   }
 }
