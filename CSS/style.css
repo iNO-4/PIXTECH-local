@@ -16,7 +16,7 @@ html {
 body {
   color: #333;
   font-size: 14px;
-  font-family: "sans-serif";
+  font-family: sans-serif;
   line-height: 1.8;
 }
 
@@ -89,6 +89,7 @@ header {
   position: sticky;
   top: 0;
   background-color: #fff;
+  z-index: 999;
 }
 
 header .container {
@@ -226,24 +227,28 @@ header .toggle + .toggle {
   max-width: 980px;
 }
 
-.section3 .box-title {
-  display: flex;
-  align-items: center;
+.section3 .curriculum {
+  position: relative;
   text-align: center;
+}
+
+.section3 .curriculum::after {
+  content: "";
+  border-top: 1px solid #eee;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+}
+
+.section3 .curriculum .title {
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  width: 272px;
   font-size: 28px;
   line-height: 1;
-}
-
-.section3 .box-title .center {
-  width: 272px;
-}
-
-.section3 .box-title:before,
-.section3 .box-title:after {
-  content: "";
-  height: 1px;
-  flex-grow: 1;
-  background-color: #eee;
+  z-index: 1;
 }
 
 .section3 .boxes {
@@ -261,7 +266,7 @@ header .toggle + .toggle {
   line-height: 1.2;
 }
 
-.section3 .boxes + .box-title {
+.section3 .box-wrap + .box-wrap {
   margin-top: 100px;
 }
 
@@ -281,7 +286,6 @@ header .toggle + .toggle {
 /* コース紹介 */
 .section4 {
   background-image: url(../img/section4-bg.jpg);
-  background-size: cover;
   background-position: center;
   background-color: #d8d8d8;
 }
@@ -290,26 +294,29 @@ header .toggle + .toggle {
   max-width: 980px;
 }
 
-.section4 .course-box {
-  max-width: 480px;
+.section4 .card {
   width: 100%;
-  margin: 0 auto;
-  padding: 0 0 20px;
   background-color: #fff;
+  box-shadow: 2px 0 2px 0 rgba(204,204,204,0.5);
 }
 
-.section4 .paid-box, .free-box {
-  height: 255px;
+.section4 .card-image {
+  position: relative;
+  padding-top: 53.125%;
   background-size: cover;
-  background-position: center;
-  padding: 20px;
 }
 
-.section4 .paid-box {
+.section4 .adult-student .card-image {
   background-image: url(../img/section4-1.png);
 }
 
-.section4 .course {
+.section4 .course-wrap {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.section4 .course-wrap .course {
   height: 34px;
   font-size: 24px;
   color: #fff;
@@ -319,58 +326,58 @@ header .toggle + .toggle {
   align-items: center;
 }
 
-.section4 .paid-box .course {
+.section4 .adult-student .course {
   width: 226px;
 }
 
-.section4 .paid {
+.section4 .adult-student .detail {
   margin-top: 15px;
   line-height: 0.7;
 }
 
-.section4 .paid .item {
+.section4 .adult-student .detail .item {
   line-height: 1.14;
 }
 
-.section4 .paid,.free .item {
+.section4 .detail .item {
   color: #fff;
 }
 
-.section4 .course-box .item-large {
+.section4 .detail .price {
   color: #ffa800;
   font-size: 24px;
 }
 
-.section4 .course-box .text-box {
-  max-width: 449px;
-  width: 94%;
-  margin: 21px auto 0;
+.section4 .card-text {
+  padding: 21px 15px 20px;
 }
 
-.section4 .terms {
-  font-weight: bold;
+.section4 .card-text .terms {
   border-top: 1px solid #eee;
   margin: 20px auto 0;
   padding-top: 10px;
+}
+
+.section4 .card-text .terms .text {
+  font-weight: bold;
   line-height: 1;
 }
 
-.section4 .list {
+.section4 .card-text .list {
   list-style-type: disc;
-  list-style-position: outside;
   margin: 19px auto 0;
-  padding-left: 1em;
+  padding-left: 16px;
 }
 
-.section4 .free-box {
+.section4 .focus-study .card-image {
   background-image: url(../img/section4-2.png);
 }
 
-.section4 .free-box .course {
+.section4 .focus-study .course {
   width: 178px;
 }
 
-.section4 .free {
+.section4 .focus-study .detail {
   margin-top: 10px;
   line-height: 1.08;
 }
@@ -432,7 +439,6 @@ header .toggle + .toggle {
 .section6 .question-box {
   background-color: #fff;
   padding: 20px 20px 66px;
-  margin: 0 auto;
 }
 
 .section6 .QA {
@@ -596,12 +602,10 @@ header .toggle + .toggle {
   background-image: url(../img/section8-bg.jpg);
   background-size: cover;
   background-position: center;
-  padding-top: 60px;
   color: #fff;
 }
 
 .section8 .about {
-  margin: auto;
   text-align: center;
 }
 
@@ -641,15 +645,18 @@ header .toggle + .toggle {
   margin-left: 5px;
 }
 
-.section8 .footer-box {
+/* ========================================== */
+/* footer */
+
+footer {
   background-color: #333;
+  color: #fff;
 }
 
-.section8 .footer-box .bar {
+footer .footer-wrap {
   max-width: 980px;
   width: 94%;
   margin: 0 auto;
-  display: flex;
   line-height: 1;
 }
 
@@ -664,13 +671,13 @@ header .toggle + .toggle {
     display: block;
   }
 
-  .section4 .course-box .text {
+  .section4 .card .description {
     height: 200px;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .section4 .course-box .text {
+  .section4 .card .description {
     height: 150px;
   }
 }
@@ -705,11 +712,23 @@ header .toggle + .toggle {
     margin-top: 20px;
   }
 
-  .section4 .course-box + .course-box {
+  .section4 {
+    background-size: auto 60%;
+  }
+
+  .section4 .contents-wrap {
+    margin-top: 20px;
+  }
+
+  .section4 .cards {
+    flex-direction: column;
+  }
+
+  .section4 .card + .card {
     margin: 40px auto 0;
   }
 
-  .section4 .course-box .text {
+  .section4 .card-text .description {
     height: auto;
   }
 
@@ -731,17 +750,20 @@ header .toggle + .toggle {
     display: none;
   }
 
-  .section8 .footer-box {
-    margin-top: 84px;
+  .section8 {
+    padding: 60px 0 84px;
+  }
+
+  footer {
     padding: 20px 0 ;
   }
 
-  .section8 .footer-box .bar {
+  footer .footer-wrap {
     display: block;
     text-align: center;
   }
 
-  .section8 .footer-box .text + .text,.copyright {
+  footer .text + .text,.copyright {
     margin: 20px auto 0;
   }
 }
@@ -756,7 +778,15 @@ header .toggle + .toggle {
     margin-left: 25px;
   }
 
-  .section4 .course-box + .course-box {
+  .section4 {
+    background-size: cover;
+  }
+
+  .section4 .cards {
+    display: flex;
+  }
+
+  .section4 .card + .card {
     margin-left: 20px;
   }
 
@@ -778,17 +808,24 @@ header .toggle + .toggle {
     padding-left: 13px;
   }
 
-  .section8 .footer-box {
+  .section8 {
+    padding: 60px 0 25px;
+  }
+
+  footer {
     height: 25px;
-    margin-top: 25px;
     padding: 6px 0 5px;
   }
 
-  .section8 .footer-box .text + .text {
+  footer .footer-wrap {
+    display: flex;
+  }
+
+  footer .text + .text {
     margin-left: 20px;
   }
 
-  .section8 .copyright {
+  footer .copyright {
     margin: 0 0 0 auto;
   }
 }
