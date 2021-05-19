@@ -515,7 +515,7 @@ header .toggle + .toggle {
 }
 
 .section7 .form-box .select {
-  height: 14px;
+  width: 54px;
   color: #5a5a5a;
 }
 
@@ -525,8 +525,8 @@ header .toggle + .toggle {
   border-right: 4px solid transparent;
   content: "";
   position: absolute;
-  top: 23px;
-  left: 20px;
+  top: 22px;
+  left: 44px;
   width: 0;
 }
 
@@ -536,10 +536,39 @@ header .toggle + .toggle {
   border-top: 5px solid #333;
   content: "";
   position: absolute;
-  top: 31px;
-  left: 20px;
+  top: 30px;
+  left: 44px;
   width: 0;
 }
+
+
+
+/* ////// */
+/* test */
+input[type="date"] {
+  color: #5a5a5a;
+  width: 200px;
+  position: relative;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+input[type="date"]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+
+input[type="date"]::-webkit-clear-button{
+  -webkit-appearance: none;
+}
+/* ////// */
+
+
+
 
 .section7 .form-box .check-wrap {
   border-top: solid 1px #eee;
@@ -603,6 +632,7 @@ header .toggle + .toggle {
   background-size: cover;
   background-position: center;
   color: #fff;
+  padding: 60px 0 84px;
 }
 
 .section8 .about {
@@ -627,12 +657,15 @@ header .toggle + .toggle {
 
 .section8 .scroll {
   margin-top: 20px;
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  margin: 0 10px 0 auto;
 }
 
 .section8 .scroll .button {
   width: 105px;
   height: 39px;
-  margin: 0 10px 0 auto;
   background-color: #ffa800;
 }
 
@@ -750,10 +783,6 @@ footer .footer-wrap {
     display: none;
   }
 
-  .section8 {
-    padding: 60px 0 84px;
-  }
-
   footer {
     padding: 20px 0 ;
   }
@@ -806,10 +835,6 @@ footer .footer-wrap {
   .section7 .form-box .dd {
     width: 75%;
     padding-left: 13px;
-  }
-
-  .section8 {
-    padding: 60px 0 25px;
   }
 
   footer {
