@@ -11,6 +11,7 @@
 
 html {
   box-sizing: border-box;
+  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -81,6 +82,29 @@ ul {
 .box {
   width: 310px;
   max-width: 100%;
+}
+
+.top-button {
+  margin-top: 20px;
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  margin: 0 10px 0 auto;
+}
+
+.top-button .button {
+  width: 105px;
+  height: 39px;
+  background-color: #ffa800;
+}
+
+.top-button .page-top {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.top-button .fa-arrow-up {
+  margin-left: 5px;
 }
 
 /* ========================================== */
@@ -391,11 +415,12 @@ header .toggle + .toggle {
   max-width: 980px;
 }
 
-.section5 .boxes {
+.section5 .teacher {
+  display: flex;
   align-items: center;
 }
 
-.section5 .teacher {
+.section5 .representative {
   height: 25px;
 }
 
@@ -405,7 +430,7 @@ header .toggle + .toggle {
   line-height: 1;
 }
 
-.section5 .teacher-bold {
+.section5 .teacher-name .name {
   font-size: 23px;
   font-weight: bold;
 }
@@ -414,17 +439,11 @@ header .toggle + .toggle {
   margin-left: 21px;
 }
 
-.section5 .teacher-text {
+.section5 .teacher .profile .text {
   max-width: 696px;
-  line-height: 1.79;
   margin-top: 11px;
   border-top: solid 1px #eee;
   padding-top: 10px;
-}
-
-.section5 .teacher-image {
-  max-width: 252px;
-  margin-left: 34px;
 }
 
 /* ========================================== */
@@ -436,36 +455,32 @@ header .toggle + .toggle {
   max-width: 980px;
 }
 
-.section6 .question-box {
+.section6 .faq {
   background-color: #fff;
   padding: 20px 20px 66px;
 }
 
-.section6 .QA {
-  max-width: 940px;
-}
-
-.section6 .QA + .QA {
+.section6 .faq .unit + .unit {
   margin-top: 86px;
 }
 
-.section6 .QA .question {
+.section6 .faq .unit .question {
   font-weight: bold;
   line-height: 1;
 }
 
-.section6 .QA .question .text {
+.section6 .faq .unit .question .head {
   color: #3333cc;
 }
 
-.section6 .QA .answer {
+.section6 .faq .unit .answer {
   border-top: solid 1px #eee;
   padding-top: 10px;
   margin-top: 10px;
   line-height: 1.28;
 }
 
-.section6 .QA .answer .text {
+.section6 .faq .unit .answer .head {
   color: #cc3333;
   font-weight: bold;
 }
@@ -479,7 +494,160 @@ header .toggle + .toggle {
   max-width: 600px;
 }
 
-.section7 .form-box .dl {
+.section7 .form-box .form-group {
+  padding-left: 15px;
+  min-height: 56px;
+  border-bottom: solid 1px #eee;
+}
+
+.section7 .form-group .head {
+  max-width: 142px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.section7 .form-group .form-label {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.section7 .form-group .need {
+  color: #fff;
+  background-color: #ffe5b3;
+  margin-left: 10px;
+  width: 34px;
+  line-height: 1.46;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.section7 .form-group .body {
+  width: 100%;
+  display: flex;
+  margin-left: 13px;
+}
+
+.section7 .form-group .body .form-input {
+  width: 100%;
+}
+
+.section7 .form-box .day {
+  align-items: baseline;
+}
+
+.section7 .form-group .body-day {
+  width: 100%;
+  margin-left: 13px;
+}
+
+.section7 .body-day .form-input {
+  height: 56px;
+  width: 24%;
+}
+
+.section7 .body-day .select-box {
+  height: 56px;
+  border-top: solid 1px #eee;
+  display: flex;
+}
+
+.section7 .select-box .select {
+  width: 16%;
+}
+
+.section7 .form-box .check-wrap {
+  margin-top: 20px;
+}
+
+.section7 .check-wrap #check {
+  vertical-align: text-top;
+}
+
+.section7 .form-box .button-wrap {
+  margin-top: 20px;
+}
+
+.section7 .form-box .button {
+  max-width: 371px;
+  height: 54px;
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+.section7 .form-box .button-post .button {
+  background-color: #ccc;
+  width: 100%;
+}
+
+.section7 .form-box .inquiry {
+  margin: 50px auto 0;
+  text-align: center;
+  line-height: 1;
+}
+
+.section7 .form-box .button-line {
+  margin-top: 10px;
+}
+
+.section7 .form-box .button-line .button {
+  background-color: #2cbf13;
+}
+
+
+
+
+.section7 .form-box .select-box {
+  position: relative;
+}
+
+.section7 .select-box::before {
+  border-bottom: 5px solid #333;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 48px;
+  width: 0;
+}
+
+.section7 .select-box::after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #333;
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 48px;
+  width: 0;
+}
+
+
+input[type="date"] {
+  color: #5a5a5a;
+  position: relative;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+input[type="date"]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+
+input[type="date"]::-webkit-clear-button{
+  -webkit-appearance: none;
+}
+
+
+/* ================================== */
+/* .section7 .form-box .dl {
   padding-left: 15px;
 }
 
@@ -505,6 +673,7 @@ header .toggle + .toggle {
 
 .section7 .form-box .inputs {
   color: #5a5a5a;
+  width: 100%;
 }
 
 .section7 .form-box .select-box {
@@ -539,13 +708,13 @@ header .toggle + .toggle {
   top: 30px;
   left: 44px;
   width: 0;
-}
+} */
 
 
 
 /* ////// */
 /* test */
-input[type="date"] {
+/* input[type="date"] {
   color: #5a5a5a;
   width: 200px;
   position: relative;
@@ -564,13 +733,13 @@ input[type="date"]::-webkit-inner-spin-button{
 
 input[type="date"]::-webkit-clear-button{
   -webkit-appearance: none;
-}
+} */
 /* ////// */
 
 
 
 
-.section7 .form-box .check-wrap {
+/* .section7 .form-box .check-wrap {
   border-top: solid 1px #eee;
   margin-top: 18px;
   padding-top: 20px;
@@ -623,7 +792,7 @@ input[type="date"]::-webkit-clear-button{
 
 .section7 .form-box .line-right {
   font-size: 14px;
-}
+} */
 
 
 /* ========================================== */
@@ -639,43 +808,14 @@ input[type="date"]::-webkit-clear-button{
   text-align: center;
 }
 
-.section8 .contents-wrap {
+.section8 .company {
+  font-size: 23px;
   line-height: 1;
 }
 
-.section8 .company {
-  font-size: 23px;
-}
-
-.section8 .address {
+.section8 .information {
   margin-top: 20px;
-}
-
-.section8 .address .item + .item {
-  margin-top: 7px;
-}
-
-.section8 .scroll {
-  margin-top: 20px;
-  position: fixed;
-  right: 0;
-  bottom: 50px;
-  margin: 0 10px 0 auto;
-}
-
-.section8 .scroll .button {
-  width: 105px;
-  height: 39px;
-  background-color: #ffa800;
-}
-
-.section8 .scroll .page-top {
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.section8 .scroll .fa-arrow-up {
-  margin-left: 5px;
+  line-height: 1.3;
 }
 
 /* ========================================== */
@@ -686,10 +826,8 @@ footer {
   color: #fff;
 }
 
-footer .footer-wrap {
+footer .container {
   max-width: 980px;
-  width: 94%;
-  margin: 0 auto;
   line-height: 1;
 }
 
@@ -719,6 +857,10 @@ footer .footer-wrap {
   .first-view .list {
     margin: 20px auto 0;
     padding-top: 20px;
+  }
+
+  .top-button {
+    display: none;
   }
 
   .pc-none {
@@ -769,31 +911,42 @@ footer .footer-wrap {
     display: none;
   }
 
-  .section7 .form-box .dl {
+  .section7 .form-box .form-group {
     display: block;
   }
 
+  /* .section7 .form-box .dl {
+    display: block;
+  } */
+
   .section7 .form-box .check-wrap {
-    line-height: 1.8;
     display: flex;
     justify-content: center;
   }
 
-  .section8 .scroll {
-    display: none;
+  .section7 .form-box .check-wrap .inner {
+    line-height: 1.8;
   }
 
   footer {
     padding: 20px 0 ;
   }
 
-  footer .footer-wrap {
+  footer .container {
     display: block;
     text-align: center;
   }
 
-  footer .text + .text,.copyright {
-    margin: 20px auto 0;
+  footer .detail {
+    display: block;
+  }
+
+  footer .detail .item + .item {
+    margin-top: 20px;
+  }
+
+  footer .copyright {
+    margin-top: 20px;
   }
 }
 
@@ -820,37 +973,44 @@ footer .footer-wrap {
   }
 
   .section5 .teacher-image {
-    max-width: 250px;
+    min-width: 250px;
     margin-left: 34px;
   }
 
-  .section7 .form-box .dl {
+  .section7 .form-box .form-group {
     display: flex;
   }
 
-  .section7 .form-box .dt {
+  /* .section7 .form-box .dt {
     width: 25%;
-  }
+  } */
   
-  .section7 .form-box .dd {
+  /* .section7 .form-box .dd {
     width: 75%;
     padding-left: 13px;
+  } */
+
+  .section7 .form-box .check-wrap .inner {
+    line-height: 1;
   }
 
   footer {
     height: 25px;
-    padding: 6px 0 5px;
+    padding: 6px 0;
   }
 
-  footer .footer-wrap {
+  footer .container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  footer .text + .text {
+  footer .detail {
+    display: flex;
+    align-items: center;
+  }
+
+  footer .item + .item {
     margin-left: 20px;
-  }
-
-  footer .copyright {
-    margin: 0 0 0 auto;
   }
 }
