@@ -9,6 +9,11 @@
   box-sizing: inherit;
 }
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 8px #ffa800;
+}
+
 html {
   box-sizing: border-box;
   /* scroll-behavior: smooth; */
@@ -128,6 +133,10 @@ header .logo {
   width: 100px;
   height: 20px;
   line-height: 1;
+}
+
+header .logo .home {
+  display: block;
 }
 
 header .list {
@@ -494,26 +503,19 @@ header .toggle + .toggle {
   max-width: 600px;
 }
 
-.section7 .form-box .form-group {
-  padding-left: 15px;
+.section7 .form-group .unit {
   min-height: 56px;
   border-bottom: solid 1px #eee;
 }
 
-.section7 .form-group .head {
+.section7 .form-group .unit .head {
   max-width: 142px;
   width: 100%;
   display: flex;
   align-items: center;
 }
 
-.section7 .form-group .form-label {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.section7 .form-group .need {
+.section7 .form-group .unit .head .need {
   color: #fff;
   background-color: #ffe5b3;
   margin-left: 10px;
@@ -523,86 +525,50 @@ header .toggle + .toggle {
   text-align: center;
 }
 
-.section7 .form-group .body {
+.section7 .form-group .unit .body {
   width: 100%;
+  color: #5a5a5a;
+}
+
+.section7 .form-group .info .body {
   display: flex;
-  margin-left: 13px;
 }
 
-.section7 .form-group .body .form-input {
+.section7 .form-group .unit .body .input {
   width: 100%;
 }
 
-.section7 .form-box .day {
+.section7 .form-group .unit .body .input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #fff inset;
+}
+
+.section7 .form-group .day {
   align-items: baseline;
 }
 
-.section7 .form-group .body-day {
-  width: 100%;
-  margin-left: 13px;
+.section7 .form-group .day .body .date {
+  width: 32%;
 }
 
-.section7 .body-day .form-input {
-  height: 56px;
-  width: 24%;
-}
-
-.section7 .body-day .select-box {
-  height: 56px;
-  border-top: solid 1px #eee;
-  display: flex;
-}
-
-.section7 .select-box .select {
-  width: 16%;
-}
-
-.section7 .form-box .check-wrap {
-  margin-top: 20px;
-}
-
-.section7 .check-wrap #check {
-  vertical-align: text-top;
-}
-
-.section7 .form-box .button-wrap {
-  margin-top: 20px;
-}
-
-.section7 .form-box .button {
-  max-width: 371px;
-  height: 54px;
-  margin: 0 auto;
-  border-radius: 9999px;
-}
-
-.section7 .form-box .button-post .button {
-  background-color: #ccc;
-  width: 100%;
-}
-
-.section7 .form-box .inquiry {
-  margin: 50px auto 0;
-  text-align: center;
-  line-height: 1;
-}
-
-.section7 .form-box .button-line {
-  margin-top: 10px;
-}
-
-.section7 .form-box .button-line .button {
-  background-color: #2cbf13;
-}
-
-
-
-
-.section7 .form-box .select-box {
+/* input[type="date"] {
   position: relative;
 }
 
-.section7 .select-box::before {
+input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+} */
+
+.section7 .form-group .day .body .select-box {
+  height: 56px;
+  border-top: solid 1px #eee;
+  display: flex;
+  position: relative;
+}
+
+.section7 .form-group .day .body .select-box::before {
   border-bottom: 5px solid #333;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
@@ -613,7 +579,7 @@ header .toggle + .toggle {
   width: 0;
 }
 
-.section7 .select-box::after {
+.section7 .form-group .day .body .select-box::after {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 5px solid #333;
@@ -624,176 +590,57 @@ header .toggle + .toggle {
   width: 0;
 }
 
-
-input[type="date"] {
-  color: #5a5a5a;
-  position: relative;
+.section7 .form-group .unit .select-box .select {
+  width: 14%;
+  cursor: pointer;
 }
 
-input[type=date]::-webkit-calendar-picker-indicator {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
+.section7 .form-group .check-wrap {
+  margin-top: 20px;
 }
 
-input[type="date"]::-webkit-inner-spin-button{
-  -webkit-appearance: none;
-}
-
-input[type="date"]::-webkit-clear-button{
-  -webkit-appearance: none;
-}
-
-
-/* ================================== */
-/* .section7 .form-box .dl {
-  padding-left: 15px;
-}
-
-.section7 .form-box .dl:not(:first-child) {
-  margin-top: 17px;
-  padding-top: 17px;
-  border-top: solid 1px #eee;
-}
-
-.section7 .form-box .dt,.dd {
-  line-height: 1.6;
-}
-
-.section7 .form-box .need {
-  color: #fff;
-  background-color: #ffe5b3;
-  padding: 3px;
-  margin-left: 10px;
-  width: 34px;
-  height: 20px;
-  border-radius: 5px;
-}
-
-.section7 .form-box .inputs {
-  color: #5a5a5a;
-  width: 100%;
-}
-
-.section7 .form-box .select-box {
-  position: relative;
-  border-top: solid 1px #eee;
-  margin-top: 18px;
-  padding-top: 18px;
-}
-
-.section7 .form-box .select {
-  width: 54px;
-  color: #5a5a5a;
-}
-
-.section7 .form-box .select-box::before {
-  border-bottom: 5px solid #333;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  content: "";
-  position: absolute;
-  top: 22px;
-  left: 44px;
-  width: 0;
-}
-
-.section7 .form-box .select-box::after {
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid #333;
-  content: "";
-  position: absolute;
-  top: 30px;
-  left: 44px;
-  width: 0;
-} */
-
-
-
-/* ////// */
-/* test */
-/* input[type="date"] {
-  color: #5a5a5a;
-  width: 200px;
-  position: relative;
-}
-
-input[type=date]::-webkit-calendar-picker-indicator {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-input[type="date"]::-webkit-inner-spin-button{
-  -webkit-appearance: none;
-}
-
-input[type="date"]::-webkit-clear-button{
-  -webkit-appearance: none;
-} */
-/* ////// */
-
-
-
-
-/* .section7 .form-box .check-wrap {
-  border-top: solid 1px #eee;
-  margin-top: 18px;
-  padding-top: 20px;
-  line-height: 1;
-}
-
-.section7 .check-wrap #check {
+.section7 .form-group .check-wrap #check {
   vertical-align: text-top;
 }
 
-.section7 .form-box .inquiry {
-  margin: 50px auto 0;
+.section7 .form-group .button-wrap {
+  margin-top: 20px;
+}
+
+.section7 .form-group .button-wrap .button {
+  max-width: 371px;
+  width: 100%;
+  height: 54px;
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+.section7 .form-group .button-wrap .send .button {
+  background-color: #ccc;
+}
+
+.section7 .form-group .button-wrap .inquiry {
+  margin-top: 50px;
   text-align: center;
   line-height: 1;
 }
 
-.section7 .form-box .button-wrap {
-  margin-top: 20px;
-}
-
-.section7 .form-box .inquiry + .button-wrap {
+.section7 .form-group .button-wrap .line {
   margin-top: 10px;
 }
 
-.section7 .form-box .button {
-  max-width: 371px;
-  height: 54px;
-  margin: 0 auto;
-  background-color: #ccc;
-  border-radius: 9999px;
-}
-
-.section7 .form-box .button-line {
-  max-width: 371px;
-  height: 54px;
-  margin: 0 auto;
-  padding: 14px 53px 14px 54px;
-  color: #fff;
+.section7 .form-group .button-wrap .line .button {
   background-color: #2cbf13;
-  border-radius: 9999px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.section7 .form-box .line-left {
-  font-size: 26px;
-}
-
-.section7 .form-box .line-right {
-  font-size: 14px;
+/* .section7 .form-group .unit .body .input:focus,
+.section7 .form-group .unit .body .date:focus,
+.section7 .form-group .unit .body .select:focus,
+.section7 .form-group .check-wrap .check:focus,
+.section7 .form-group .button-wrap .button:focus 
+{
+  box-shadow: 0 0 4px #ffa800;
 } */
-
 
 /* ========================================== */
 .section8 {
@@ -911,20 +758,28 @@ footer .container {
     display: none;
   }
 
-  .section7 .form-box .form-group {
+  .section7 .form-group .unit {
     display: block;
   }
 
-  /* .section7 .form-box .dl {
-    display: block;
-  } */
+  .section7 .form-group .info {
+    padding: 19px 0 15px 15px;
+  }
 
-  .section7 .form-box .check-wrap {
+  .section7 .form-group .day {
+    padding: 19px 0 0 15px;
+  }
+
+  .section7 .form-group .day .body .select-box {
+    margin-top: 15px;
+  }
+
+  .section7 .form-group .check-wrap {
     display: flex;
     justify-content: center;
   }
 
-  .section7 .form-box .check-wrap .inner {
+  .section7 .form-group .check-wrap .inner {
     line-height: 1.8;
   }
 
@@ -977,20 +832,20 @@ footer .container {
     margin-left: 34px;
   }
 
-  .section7 .form-box .form-group {
+  .section7 .form-group .unit {
     display: flex;
+    padding-left: 15px;
   }
 
-  /* .section7 .form-box .dt {
-    width: 25%;
-  } */
-  
-  /* .section7 .form-box .dd {
-    width: 75%;
-    padding-left: 13px;
-  } */
+  .section7 .form-group .unit .body {
+    margin-left: 13px;
+  }
 
-  .section7 .form-box .check-wrap .inner {
+  .section7 .form-group .day .body .date {
+    height: 56px;
+  }
+
+  .section7 .form-group .check-wrap .inner {
     line-height: 1;
   }
 
