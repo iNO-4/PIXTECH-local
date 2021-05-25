@@ -17,7 +17,7 @@
     <header>
       <div class="container">
         <h1 class="logo">
-          <a href="#"><img src="img/logo_sticky.png" alt="PIX TECH" /></a>
+          <a href="#" class="home"><img src="img/logo_sticky.png" alt="PIX TECH" /></a>
         </h1>
         <nav class="nav">
           <ul class="list">
@@ -379,44 +379,38 @@
           </div>
           <div class="contents-wrap">
 
-            <form action="" method="POST" class="form-box">
+            <form action="" method="POST" class="form-group">
               <fieldset>
                 <!-- 名前 -->
-                <div class="form-group">
+                <div class="unit info">
                   <p class="head">
-                    <label for="name" class="form-label">
-                      お名前
-                    </label>
+                    <label for="name">お名前</label>
                     <span class="need">必須</span>
                   </p>
                   <div class="body">
-                    <input type="text" name="name" id="name" placeholder="例：山田太郎" required="true" class="form-input" />
+                    <input type="text" name="name" id="name" class="input" placeholder="例：山田太郎" required="true" />
                   </div>
                 </div>
                 <!-- メール -->
-                <div class="form-group">
+                <div class="unit info">
                   <p class="head">
-                    <label for="mail" class="form-label">
-                      メールアドレス
-                    </label>
+                    <label for="mail">メールアドレス</label>
                     <span class="need">必須</span>
                   </p>
                   <div class="body">
-                    <input type="email" name="mail" id="mail" placeholder="例：xxxx@xxxx.xxx.xx" required="true" class="form-input" />
+                    <input type="email" name="mail" id="mail" class="input" placeholder="例：xxxx@xxxx.xxx.xx" required="true" />
                   </div>
                 </div>
                 <!-- 第一希望 -->
-                <div class="form-group day">
+                <div class="unit day">
                   <p class="head">
-                    <label class="form-label">
-                      第一希望
-                    </label>
+                    <label>第一希望</label>
                     <span class="need">必須</span>
                   </p>
-                  <div class="body-day">
-                    <input type="date" name="date" class="form-input" required="true" />
+                  <div class="body">
+                    <input type="date" name="date" class="date" required="true" />
                     <div class="select-box">
-                      <select required="true" class="select">
+                      <select name="times" class="select" required="true">
                         <option value="" disabled selected>- - -</option>
                         <option value="time">10:00</option>
                         <option value="time">10:30</option>
@@ -446,86 +440,36 @@
                   </div>
                 </div>
                 <!-- 第二希望 -->
-                <div class="form-group day">
+                <div class="unit day">
                   <p class="head">
-                    <label class="form-label">
-                      第二希望
-                    </label>
+                    <label>第二希望</label>
                   </p>
-                  <div class="body-day">
-                    <input type="date" name="date" class="form-input" />
+                  <div class="body">
+                    <input type="date" name="date" class="date" />
                     <div class="select-box">
-                      <select class="select">
+                      <select name="times" class="select">
                         <option value="" disabled selected>- - -</option>
-                        <option value="time">10:00</option>
-                        <option value="time">10:30</option>
-                        <option value="time">11:00</option>
-                        <option value="time">11:30</option>
-                        <option value="time">12:00</option>
-                        <option value="time">12:30</option>
-                        <option value="time">13:00</option>
-                        <option value="time">13:30</option>
-                        <option value="time">14:00</option>
-                        <option value="time">14:30</option>
-                        <option value="time">15:00</option>
-                        <option value="time">15:30</option>
-                        <option value="time">16:00</option>
-                        <option value="time">16:30</option>
-                        <option value="time">17:00</option>
-                        <option value="time">17:30</option>
-                        <option value="time">18:00</option>
-                        <option value="time">18:30</option>
-                        <option value="time">19:00</option>
-                        <option value="time">19:30</option>
-                        <option value="time">20:00</option>
-                        <option value="time">20:30</option>
-                        <option value="time">21:00</option>
                       </select>
                     </div>
                   </div>
                 </div>
                 <!-- 第三希望 -->
-                <div class="form-group day">
+                <div class="unit day">
                   <p class="head">
-                    <label class="form-label">
-                      第三希望
-                    </label>
+                    <label>第三希望</label>
                   </p>
-                  <div class="body-day">
-                    <input type="date" name="date" class="form-input" />
+                  <div class="body">
+                    <input type="date" name="date" class="date" />
                     <div class="select-box">
-                      <select class="select">
+                      <select name="times" class="select">
                         <option value="" disabled selected>- - -</option>
-                        <option value="time">10:00</option>
-                        <option value="time">10:30</option>
-                        <option value="time">11:00</option>
-                        <option value="time">11:30</option>
-                        <option value="time">12:00</option>
-                        <option value="time">12:30</option>
-                        <option value="time">13:00</option>
-                        <option value="time">13:30</option>
-                        <option value="time">14:00</option>
-                        <option value="time">14:30</option>
-                        <option value="time">15:00</option>
-                        <option value="time">15:30</option>
-                        <option value="time">16:00</option>
-                        <option value="time">16:30</option>
-                        <option value="time">17:00</option>
-                        <option value="time">17:30</option>
-                        <option value="time">18:00</option>
-                        <option value="time">18:30</option>
-                        <option value="time">19:00</option>
-                        <option value="time">19:30</option>
-                        <option value="time">20:00</option>
-                        <option value="time">20:30</option>
-                        <option value="time">21:00</option>
                       </select>
                     </div>
                   </div>
                 </div>
                 <div class="check-wrap">
                   <p class="inner">
-                    <input type="checkbox" name="同意" id="check" required="true" />
+                    <input type="checkbox" name="同意" id="check" class="check" required="true" />
                     <label for="check"><br class="pc-none" />
                       上記の内容でよろしければ、チェックを入れて<br class="pc-none" />ください。
                     </label>
@@ -533,11 +477,11 @@
                 </div>
               </fieldset>
               <div class="button-wrap">
-                <p class="button-post">
+                <p class="send">
                   <input type="submit" value="送信する" class="button" />
                 </p>
                 <p class="inquiry">ご質問、ご相談の方はLINE@で簡単問い合わせ</p>
-                <p class="button-line">
+                <p class="line">
                   <a href="#" class="button">
                     <img src="img/line.png" alt="Line@でのお問い合わせはこちら" />
                   </a>
@@ -545,160 +489,6 @@
               </div>
             </form>
 
-            <!-- <form class="form-box">
-              <dl class="dl">
-                <dt class="dt">
-                  <label class="label" for="yourname">
-                    お名前
-                  </label>
-                  <span class="need">必須</span>
-                </dt>
-                <dd class="dd">
-                  <input class="inputs" type="text" name="yourname" placeholder="例：山田太郎" />
-                </dd>
-              </dl>
-              <dl class="dl">
-                <dt class="dt">
-                  <label class="label" for="mail">
-                    メールアドレス
-                  </label>
-                  <span class="need">必須</span>
-                </dt>
-                <dd class="dd">
-                  <input class="inputs" type="email" name="mail" placeholder="例：xxxx@xxxx.xxx.xx" />
-                </dd>
-              </dl>
-              <dl class="dl">
-                <dt class="dt">
-                  <label class="label" for="day">
-                    第一希望
-                  </label>
-                  <span class="need">必須</span>
-                </dt>
-                <dd class="dd">
-                  <input name="date" type="date" />
-                  <div class="select-box">
-                    <select class="select">
-                      <option value="" disabled selected>- - -</option>
-                      <option value="time">10:00</option>
-                      <option value="time">10:30</option>
-                      <option value="time">11:00</option>
-                      <option value="time">11:30</option>
-                      <option value="time">12:00</option>
-                      <option value="time">12:30</option>
-                      <option value="time">13:00</option>
-                      <option value="time">13:30</option>
-                      <option value="time">14:00</option>
-                      <option value="time">14:30</option>
-                      <option value="time">15:00</option>
-                      <option value="time">15:30</option>
-                      <option value="time">16:00</option>
-                      <option value="time">16:30</option>
-                      <option value="time">17:00</option>
-                      <option value="time">17:30</option>
-                      <option value="time">18:00</option>
-                      <option value="time">18:30</option>
-                      <option value="time">19:00</option>
-                      <option value="time">19:30</option>
-                      <option value="time">20:00</option>
-                      <option value="time">20:30</option>
-                      <option value="time">21:00</option>
-                    </select>
-                    <span></span>に対してbefore:afterをつける
-                  </div>
-                </dd>
-              </dl>
-              <dl class="dl">
-                <dt class="dt">
-                  <label class="label" for="day">第二希望</label>
-                </dt>
-                <dd class="dd">
-                  <input name="date" type="date" />
-                  <p class="select-box">
-                    <select class="select">
-                      <option value="" disabled selected>- - -</option>
-                      <option value="time">10:00</option>
-                      <option value="time">10:30</option>
-                      <option value="time">11:00</option>
-                      <option value="time">11:30</option>
-                      <option value="time">12:00</option>
-                      <option value="time">12:30</option>
-                      <option value="time">13:00</option>
-                      <option value="time">13:30</option>
-                      <option value="time">14:00</option>
-                      <option value="time">14:30</option>
-                      <option value="time">15:00</option>
-                      <option value="time">15:30</option>
-                      <option value="time">16:00</option>
-                      <option value="time">16:30</option>
-                      <option value="time">17:00</option>
-                      <option value="time">17:30</option>
-                      <option value="time">18:00</option>
-                      <option value="time">18:30</option>
-                      <option value="time">19:00</option>
-                      <option value="time">19:30</option>
-                      <option value="time">20:00</option>
-                      <option value="time">20:30</option>
-                      <option value="time">21:00</option>
-                    </select>
-                  </p>
-                </dd>
-              </dl>
-              <dl class="dl">
-                <dt class="dt">
-                  <label class="label" for="day">第三希望</label>
-                </dt>
-                <dd class="dd">
-                  <div class="">
-                    <input name="date" type="date" />
-                  </div>
-                  <p class="select-box">
-                    <select class="select">
-                      <option value="" disabled selected>- - -</option>
-                      <option value="time">10:00</option>
-                      <option value="time">10:30</option>
-                      <option value="time">11:00</option>
-                      <option value="time">11:30</option>
-                      <option value="time">12:00</option>
-                      <option value="time">12:30</option>
-                      <option value="time">13:00</option>
-                      <option value="time">13:30</option>
-                      <option value="time">14:00</option>
-                      <option value="time">14:30</option>
-                      <option value="time">15:00</option>
-                      <option value="time">15:30</option>
-                      <option value="time">16:00</option>
-                      <option value="time">16:30</option>
-                      <option value="time">17:00</option>
-                      <option value="time">17:30</option>
-                      <option value="time">18:00</option>
-                      <option value="time">18:30</option>
-                      <option value="time">19:00</option>
-                      <option value="time">19:30</option>
-                      <option value="time">20:00</option>
-                      <option value="time">20:30</option>
-                      <option value="time">21:00</option>
-                    </select>
-                  </p>
-                </dd>
-              </dl>
-              <div class="check-wrap">
-                <p>
-                  <input id="check" type="checkbox" name="同意" />
-                  <label for="check"
-                    ><br class="pc-none" />
-                    上記の内容でよろしければ、チェックを入れて<br class="pc-none" />ください。
-                  </label>
-                </p>
-              </div>
-              <p class="button-wrap"><a href="#" class="button">送信する</a></p>
-              <p class="inquiry">ご質問、ご相談の方はLINE@で簡単問い合わせ</p>
-              <p class="button-wrap">
-                <a href="#" class="button-line">
-                  <span class="line-left">LINE@</span><span class="line-right">でのお問い合わせはこちら</span>
-                </a>
-              </p>
-            </form> -->
           </div>
         </div>
       </section>
